@@ -3,6 +3,7 @@
 import time
 from selenium import webdriver
 from selenium.common.exceptions import *
+from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
 class Query:
