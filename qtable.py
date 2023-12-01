@@ -88,7 +88,8 @@ class qtable:
 			return q
 		if isinstance(q,Query.All):
 			try:
-				return self._driver.find_elements_by_css_selector(q)
+				#return self._driver.find_elements_by_css_selector(q)
+				return self._driver.find_elements(By.CSS_SELECTOR,q)
 			except NoSuchElementException:
 				return None
 		elif isinstance(q,Query.Script):
@@ -96,7 +97,8 @@ class qtable:
 			return self._driver.execute_script(script)
 		else:
 			try:
-				return self._driver.find_element_by_css_selector(q)
+				#return self._driver.find_element_by_css_selector(q)
+				return self._driver.find_element(By.CSS_SELECTOR,q)
 			except NoSuchElementException:
 				return None
 	
